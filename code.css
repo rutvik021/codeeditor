@@ -1,0 +1,443 @@
+body {
+  background: #000; /* Black background */
+  color: #fff; /* White text color */
+  font-family: 'Lato', sans-serif; /* Use Lato font */
+  text-align: center; /* Center align text */
+}
+
+.title {
+  color: #6be7dc; /* Blue color for the title */
+  font-size: 3rem; /* Adjust font size as needed */
+  text-shadow: 0 0 10px rgba(232, 233, 234, 0.8); /* Text shadow for glow effect */
+  margin-top: 50px;
+}
+
+.subtitle {
+  color: #f9f6f6; /* Black color for subtitle */
+  font-size: 1.5rem; /* Adjust font size as needed */
+  text-shadow: 0 0 10px rgba(117, 220, 204, 0.8); /* Text shadow for glow effect */
+  margin-top: 100px;
+}
+
+
+.quote {
+  margin-top: 30px; /* Adjust margin as needed */
+}
+
+.quote-text, .action-text {
+  color: #000; /* Black color for the quote and action text */
+  font-style: italic; /* Italics for the quote text */
+  text-decoration: none; /* Remove underline from links */
+  display: block; /* Ensure links are block level */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Text shadow for glow effect */
+}
+
+.action-text {
+  margin-top: 10px; /* Adjust margin as needed */
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  top: 20px;
+  left: 20px;
+  margin-top: 450px;
+  color: #000;
+ border-radius: 20px;
+}
+ 
+.btn p {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-family: 'Arial Black'; /* Change font here */
+  font-size: 20px;
+  font-weight: bold;
+  /* Adjust size as needed */
+}
+.buttons button {
+  width: 150px;
+  height: 50px;
+  background: linear-gradient(to right,#7f5d19,#ffd277,#ffd277,#caa65d,#ffd277,#77530a);
+  margin: 20px;
+  color: #0c0b0b; /* Dark text color */
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  border: none; /* Remove border for cleaner look */
+  box-shadow: 0 0 3px rgb(235, 236, 231), 0 0 10px rgb(238, 241, 238), 0 0 20px rgb(232, 235, 232), 0 0 20px #0f0;
+
+  
+}
+
+
+
+.buttons button p {
+  padding: 0;
+  margin: 0;
+  transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.buttons button p:before,
+.buttons button p:after {
+  position: absolute;
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+  z-index: 1;
+  left: 0;
+}
+
+.buttons button p:before {
+  content: attr(data-title);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.buttons button p:after {
+  content: attr(data-text);
+  top: 150%;
+  color: #2dee06; /* Matching golden yellow color */
+  background-color: #000;
+
+}
+
+
+.buttons button:hover p:after {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.buttons button.start {
+  background-color: #ffd700; /* Adjusted for start button */
+  box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.buttons button.start p:before {
+  top: -50%;
+  transform: rotate(5deg);
+}
+
+.buttons button.start p:after {
+  color: white;
+  transition: all 0s ease;
+  content: attr(data-start);
+  top: 50%;
+  transform: translateY(-50%);
+  animation: start 0.3s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes start {
+  from {
+    top: -50%;
+  }
+}
+
+.buttons button.start:hover:before,
+.buttons button.start:hover:after {
+  display: none;
+}
+
+.buttons button.start:hover span {
+  display: none;
+}
+
+.buttons button:active {
+  outline: none;
+  border: none;
+}
+
+.buttons button:focus {
+  outline: 0;
+}
+
+a {
+  color: #000; /* Link color */
+}
+
+/**/
+footer {
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 20px;
+background-color: #0c0c0c;
+color: #f3e9e9;
+font-family: "Lobster", sans-serif;
+font-size: 20px;
+font-style: normal;
+border: 2px solid #ede7e7; /* Added border property */
+/* Optional: Add border radius for rounded corners */
+margin-top: 60px;
+text-align: center;
+justify-content: center;
+}
+
+    /* Reset some default styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+
+/* Link styles */
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Custom styles for specific classes */
+.call-to-action {
+    font-size: 1.25rem;
+    color: green;
+    border: 2px solid green;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.call-to-action:hover {
+    background-color: green;
+    color: white;
+    border-color: green;
+}
+
+/* Style for the section */
+.centered-content {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Apply a box shadow and rounded corners */
+
+/**/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-y: hidden; */
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0c0c0c;
+  color: #f3e9e9;
+  font-family: "Lobster", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  border: 2px solid #31e2c7;
+  border-radius: 20px;
+  width: 100%; /* Ensure full width */
+}
+
+/* Logo styles */
+.logo {
+  flex: 1; /* Take remaining space */
+  text-align: left; /* Align text to the left */
+  margin-left: 20px; /* Add margin for spacing */
+}
+
+/* Navigation links styles */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  position: relative;
+  margin-right: 20px;
+  padding: 10px 15px;
+  transition: transform 0.3s ease;
+}
+
+.nav-links li::before,
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #f6efef;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  transform: scaleX(0); /* Initial state for the underline effect */
+  transform-origin: center;
+}
+
+.nav-links li::before {
+  top: 0;
+}
+
+.nav-links li::after {
+  bottom: 0;
+}
+
+.nav-links li:hover::before,
+.nav-links li:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f8f4f4;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0fe8b9;
+}
+
+/* Blink animation */
+.blink {
+  font-size: 30px;
+  font-weight: bold;
+  color: #0c0c0c;
+  animation: blink-animation 3s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+      color: #f1f1f3;
+      visibility: hidden;
+  }
+}
+
+/**/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #24C6DC; 
+  background: -webkit-linear-gradient(to bottom, #000000, #000000);
+  background: linear-gradient(to bottom, #000000, #000000);
+}
+
+.box div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 6px solid rgba(255,255,255,0.8);
+}
+
+.box div:nth-child(1) {
+  top: 12%;
+  left: 42%;
+  animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2) {
+  top: 70%;
+  left: 50%;
+  animation: animate 7s linear infinite;
+}
+.box div:nth-child(3) {
+  top: 17%;
+  left: 6%;
+  animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(4) {
+  top: 20%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(5) {
+  top: 67%;
+  left: 10%;
+  animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(6) {
+  top: 80%;
+  left: 70%;
+  animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(7) {
+  top: 60%;
+  left: 80%;
+  animation: animate 15s linear infinite;
+}
+
+.box div:nth-child(8) {
+  top: 32%;
+  left: 25%;
+  animation: animate 16s linear infinite;
+}
+
+.box div:nth-child(9) {
+  top: 90%;
+  left: 25%;
+  animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(10) {
+  top: 20%;
+  left: 80%;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(-90px) rotate(360deg);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: scale(1.3) translateY(-90px) rotate(-180deg);
+    border-radius: 50%;
+    opacity: 0;
+  }
+}
+/**/
+/**/
+footer {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0c0c0c;
+  color: #f3e9e9;
+  font-family: "Lobster", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  border: 2px solid #ede7e7; /* Added border property */
+/* Optional: Add border radius for rounded corners */
+  margin-top: 60px;
+  text-align: center;
+  justify-content: center;
+}

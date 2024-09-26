@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="contact.css">
+    
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap" rel="stylesheet">
+<div class="navbar">
+    <div class="logo">
+        <a class="blink">WELCOME TO RUTVIK'S CODEEDITOR</a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="code.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+</div>
+</head>
+
+</head>
+    <body style="background-image: url(contact.png)">
+   
+        <div class="container">
+            <header>
+                <h1>Contact Us</h1>
+                <p> "Have questions or inquiries? Reach out to us today! Our team is ready to assist you with any queries or feedback you may have."</p>
+            </header>
+            <div class="content">
+                <div class="content-form">
+                    <section>
+                        <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+                        <h2>Address</h2>
+                        <p>
+                            At.post Bhadgaon <br>
+                            Tal.Khed Dist.Ratnagirti <br>
+                           Pin.415709
+                        </p>
+                    </section>
+    
+                    <section>
+                        <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+                        <h2>Phone</h2>
+                        <p>8010302234</p>
+                    </section>
+    
+                    <section>
+                        <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+                        <h2>E-mail</h2>
+                        <p>gholerutvik@gmail.com</p>
+                    </section>
+                </div>
+            </div>
+            <form id="contactForm">
+                <div class="form">
+                  <div class="right">
+                    <div class="contact-form">
+                      <input type="text" id="fullName" required>
+                      <span>Full Name</span>
+                    </div>
+              
+                    <div class="contact-form">
+                      <input type="email" id="email" required>
+                      <span>Email Id</span>
+                    </div>
+              
+                    <div class="contact-form">
+                      <textarea id="message" name="text" required></textarea>
+                      <span>Type your Message....</span>
+                    </div>
+              
+                    <div class="contact-form">
+                      <input type="submit" name="submit">
+                    </div>
+                  </div>
+                </div>
+              </form>
+              
+          
+            <div class="empty">
+    
+            </div>
+        </div>    
+    </div>
+    </body>
+    <script>
+   document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contactForm');
+  
+  contactForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting
+    
+    // Validation
+    const fullName = document.getElementById('fullName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    
+    // Basic validation: check if fields are not empty
+    if (fullName === '' || email === '' || message === '') {
+      alert('Please fill in all fields');
+      return;
+    }
+    
+    // Email validation using regular expression
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address');
+      return;
+    }
+    else{
+    // If all validations pass, show success message
+    alert('Your form has been successfully submitted to Rutvik');
+    }
+    // Optional: Reset the form after submission
+    contactForm.reset();
+  });
+});
+
+    </script>
+    </html>
+    
+
